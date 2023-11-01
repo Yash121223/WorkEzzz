@@ -1,0 +1,30 @@
+.about{
+    background: url('../images/about.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 3rem;
+
+}
+
+.about h2{
+    margin-bottom: 2rem;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.about p{
+    max-width: 30rem;
+    line-height: 1.5rem;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: justify;
+    /* padding: 2rem; */
+    margin: 2rem;
+}
