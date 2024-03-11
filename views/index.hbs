@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/css/director.css">
+    <link rel="stylesheet" href="/css/batch.css">k
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -34,65 +35,107 @@
             </ul>
         </section>
 
-        
+
     </nav>
 
-<section class="container">
-            <div class="arrow l" onclick="prev()">
-                <img src="/images/l.png" alt="">
+    <section class="container">
+        <div class="arrow l" onclick="prev()">
+            <img src="/images/l.png" alt="">
+        </div>
+        <div class="slide slide-1">
+            <div class="text-container" id="p-1">
+                <h2>Try Us</h2>
+                <h4>And enjoy no load college life</h4>
+                <button class="btn" id="padding"><a href="sdas">Click Here</a></button>
             </div>
-            <div class="slide slide-1">
-                <div class="text-container" id="p-1">
-                    <h2>Try Us</h2>
-                    <h4>And enjoy no load college life</h4>
-                    <button class="btn" id="padding"><a href="sdas">Click Here</a></button>
-                </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="text-container">
+                <h2>Join Us</h2>
+                <h4>And help others from writing</h4>
+                <button class="btn" id="padding">Join Here</button>
             </div>
-            <div class="slide slide-2">
-                <div class="text-container">
-                    <h2>Join Us</h2>
-                    <h4>And help others from writing</h4>
-                    <button class="btn" id="padding">Join Here</button>
-                </div>
+        </div>
+        <div class="slide slide-3">
+            <div class="caption">
+                <p>Life is too short! Don't waste on assignments,</p>
+                <h3>Try WorkEzz today</h3>
             </div>
-            <div class="slide slide-3">
-                <div class="caption">
-                    <p>Life is too short! Don't waste on assignments,</p>
-                    <h3>Try WorkEzz today</h3>
-                </div>
-            </div>
-            <div class="arrow r" onclick="next()">
-                <img src="/images/r.png" alt="">
-            </div>
-        </section>
+        </div>
+        <div class="arrow r" onclick="next()">
+            <img src="/images/r.png" alt="">
+        </div>
+    </section>
 
-        <section class="about">
-            <h2>About Us</h2>
-            <p>WorkEzzz is an platform build for the convinience of students by helping them writing their assignments / homeworks / projects / lab assignments etc. We believe in personal growth by learning new skills rather than building these projects and assignments, that are the cause of wastage of time most of the times. Instead a student can approach to the WorkEzzz, here there are lot of people who are wiling to write your assignments that too at a feasible cost!!!</p>
-            <p>Not only for those who want to write, we have something for them also that wants to contribute by writing. Join our team today and get a reasonable pay for each assignment you complete. Don't waste your writing talent and earn some easy money from it. A little effort and your wallet will be full.</p>
-        </section>
-       <section class="directorArea">
+    <section class="about">
+        <h2>About Us</h2>
+        <p>WorkEzzz is an platform build for the convinience of students by helping them writing their assignments /
+            homeworks / projects / lab assignments etc. We believe in personal growth by learning new skills rather than
+            building these projects and assignments, that are the cause of wastage of time most of the times. Instead a
+            student can approach to the WorkEzzz, here there are lot of people who are wiling to write your assignments
+            that too at a feasible cost!!!</p>
+        <p>Not only for those who want to write, we have something for them also that wants to contribute by writing.
+            Join our team today and get a reasonable pay for each assignment you complete. Don't waste your writing
+            talent and earn some easy money from it. A little effort and your wallet will be full.</p>
+    </section>
+    <section class="directorArea">
         <div class="director-photu">
             <img src="/images/me.png" alt="">
         </div>
         <div class="director-comment">
-           <div class="box">
-            <div class="text">
-                <i class="fa fa-quote-right fa2" aria-hidden="true"></i>
-                <i class="fa fa-quote-left fa1" aria-hidden="true"></i>
-                <div>
-                    <h1>Founder's Words</h1>
-                    <p>I love writing and used to write short stories and assignment for my friends. This gave me an idea of opening a firm that hires those who have the talent and hobbies as writing in their free time and provide services to those who don't want to write assignment on their own. They say, When you are good at something don't do it for free!!!
-                        <br>
-                        <br>
-                        Yash Agarwal
-                    </p>
+            <div class="box">
+                <div class="text">
+                    <i class="fa fa-quote-right fa2" aria-hidden="true"></i>
+                    <i class="fa fa-quote-left fa1" aria-hidden="true"></i>
+                    <div>
+                        <h1>Founder's Words</h1>
+                        <p>I love writing and used to write short stories and assignment for my friends. This gave me an
+                            idea of opening a firm that hires those who have the talent and hobbies as writing in their
+                            free time and provide services to those who don't want to write assignment on their own.
+                            They say, When you are good at something don't do it for free!!!
+                            <br>
+                            <br>
+                            Yash Agarwal
+                        </p>
+                    </div>
                 </div>
             </div>
-           </div>
         </div>
-       </section>
+    </section>
+
+    <section class="batch-container">
+        <h3>OUR TEAM</h3>
+        <h2>Find The Right Writer For You</h2>
+        <div class="batch-list">
+            
+            {{#data}}
+
+            <div id="batchdetails">
+                <div class="batch-detail">
+                    <div class="image-part">
+                        <img src="data:image/jpeg;base64,{{Photo.toString 'base64'}}">
+                        <div class="over-img-part">
+                            <h1>{{Expertise}}</h1>
+                            <div class="date-area">
+                               <button><a href="#">{{Experience}}</a></button> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="batch-content-part" id="batchbtn">
+                        <h2> {{Name}}</h2>
+                        <span>{{Year}}</span>
+                        <button><a href="#">Check Sample Writing</a></button>
+                    </div>
+
+                </div>
+              
+            {{/data}}
+
+        </div>
+
+    </section>
 
 </body>
 <script src="/js/index.js"></script>
+
 </html>

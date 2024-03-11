@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>TestId </th>
+                <th>Test Name</th>
+                <th>Subject</th>
+                <th>Total Marks</th>
+                <th>Action</th>
+                <th>Action</th>
+            </tr>
+
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{s_num}}</td>
+                <td>{{Name}}</td>
+                <td>{{Year}}</td>
+                <td>{{Expertise}}</td>
+                <td>{{Experience}}</td>
+                <td><img src="data:image/png;base64,{{Photo}}" alt=""></td>
+                <td>{{Sample}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+        </thead>
+    </table>
+</body>
+
+</html>
